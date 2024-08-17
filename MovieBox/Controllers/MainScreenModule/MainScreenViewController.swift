@@ -21,6 +21,11 @@ class MainScreenViewController: UIViewController {
         defaultSetup()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.getData()
+    }
+    
     private func defaultSetup() {
         self.title = "Main View"
         tableViewSetup()
