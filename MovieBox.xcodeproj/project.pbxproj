@@ -12,6 +12,7 @@
 		1D3E5C6C2C70FD6C0035205C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E5C6B2C70FD6C0035205C /* Base */; };
 		1D3E5C762C7102280035205C /* MainScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3E5C752C7102280035205C /* MainScreenViewController.xib */; };
 		1D3E5C772C7102280035205C /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E5C742C7102280035205C /* MainScreenViewController.swift */; };
+		1D3E5C822C71212F0035205C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E5C812C71212F0035205C /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1D3E5C6D2C70FD6C0035205C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D3E5C742C7102280035205C /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		1D3E5C752C7102280035205C /* MainScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenViewController.xib; sourceTree = "<group>"; };
+		1D3E5C812C71212F0035205C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		1D3E5C7A2C71095B0035205C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1D3E5C812C71212F0035205C /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				1D3E5C602C70FD6B0035205C /* AppDelegate.swift in Sources */,
 				1D3E5C772C7102280035205C /* MainScreenViewController.swift in Sources */,
+				1D3E5C822C71212F0035205C /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
