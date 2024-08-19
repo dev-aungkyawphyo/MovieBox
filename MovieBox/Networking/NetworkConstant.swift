@@ -17,7 +17,6 @@ class NetworkConstant {
     
     public var apiKey: String {
         get {
-            // API Key from https://api.themoviedb.org
             return "949d7b353dd77ddbba10faa299a9fd48"
         }
     }

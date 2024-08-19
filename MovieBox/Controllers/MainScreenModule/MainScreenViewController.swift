@@ -16,7 +16,7 @@ class MainScreenViewController: UIViewController {
     // MARK: ViewModel
     var viewModel: MainViewModel = MainViewModel()
     
-    var cellDataSource: [Movie] = []
+    var cellDataSource: [MovieTableViewCellViewModel] = []
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class MainScreenViewController: UIViewController {
     }
     
     private func defaultSetup() {
-        self.title = "Main View"
+        self.title = "Trending Movies"
         tableViewSetup()
         registerCells() 
         bindViewModel()
@@ -42,7 +42,7 @@ class MainScreenViewController: UIViewController {
     }
     
     private func registerCells() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(MovieTableViewCell.nib(), forCellReuseIdentifier: MovieTableViewCell.identifier)
     }
     
     func bindViewModel() {
@@ -81,7 +81,9 @@ class MainScreenViewController: UIViewController {
 // MARK: - UITableViewDelegate
 extension MainScreenViewController: UITableViewDelegate {
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
     
 }
 
@@ -97,9 +99,12 @@ extension MainScreenViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let movieData = cellDataSource[indexPath.row]
-        cell.textLabel?.text = viewModel.getMovieTitle(movieData)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.identifier , for: indexPath) as? MovieTableViewCell else {
+            return UITableViewCell()
+        }
+        let cellViewModel = cellDataSource[indexPath.row]
+        cell.configCell(viewModel: cellViewModel)
+        cell.selectionStyle = .none
         return cell
     }
     
