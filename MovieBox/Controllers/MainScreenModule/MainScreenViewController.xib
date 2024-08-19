@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainScreenViewController" customModule="MovieBox" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="Ndv-yw-eG5" id="kLN-Mm-giu"/>
                 <outlet property="tableView" destination="Fhd-kC-96A" id="sKD-C1-Wsx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,13 +24,19 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ndv-yw-eG5">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                    <color key="color" systemColor="systemGray2Color"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Ndv-yw-eG5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MeT-nk-3Ex"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Fhd-kC-96A" secondAttribute="bottom" id="RZK-U1-2uE"/>
                 <constraint firstItem="Fhd-kC-96A" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gSa-AA-83S"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fhd-kC-96A" secondAttribute="trailing" id="hhH-Kl-YPw"/>
+                <constraint firstItem="Ndv-yw-eG5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xaf-tM-d3k"/>
                 <constraint firstItem="Fhd-kC-96A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yZt-T6-XTx"/>
             </constraints>
             <point key="canvasLocation" x="-22" y="20"/>
@@ -38,6 +45,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -23,10 +23,10 @@ public class APIClient {
             return
         }
         URLSession.shared.dataTask(with: url) { data, response, error in
-            if error == nil {
-                let data = data
-                let result = try? JSONDecoder().decode(TrendingMoviesModel.self, from: data!)
-                completionHandler(.success(result!))
+            if error == nil,
+               let data = data,
+               let result = try? JSONDecoder().decode(TrendingMoviesModel.self, from: data) {
+                completionHandler(.success(result))
             } else {
                 completionHandler(.failure(.canNotParseData))
             }
