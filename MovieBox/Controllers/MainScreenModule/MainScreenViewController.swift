@@ -11,9 +11,12 @@ class MainScreenViewController: UIViewController {
     
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: ViewModel
     var viewModel: MainViewModel = MainViewModel()
+    
+    var cellDataSource: [Movie] = []
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -30,6 +33,7 @@ class MainScreenViewController: UIViewController {
         self.title = "Main View"
         tableViewSetup()
         registerCells() 
+        bindViewModel()
     }
     
     private func tableViewSetup() {
@@ -39,6 +43,32 @@ class MainScreenViewController: UIViewController {
     
     private func registerCells() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    func bindViewModel() {
+        viewModel.isLoading.bind { [weak self] isLoading in
+            guard let self = self,
+                  let isLoading = isLoading else { return }
+            DispatchQueue.main.async {
+                if isLoading {
+                    self.activityIndicator.startAnimating()
+                } else {
+                    self.activityIndicator.stopAnimating() 
+                }
+            }
+        }
+        viewModel.cellDataSource.bind { [weak self] movies in
+            guard let self = self,
+                  let movies = movies else { return }
+            self.cellDataSource = movies
+            reloadTableView()
+        }
+    }
+    
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
 }
@@ -68,7 +98,8 @@ extension MainScreenViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
+        let movieData = cellDataSource[indexPath.row]
+        cell.textLabel?.text = viewModel.getMovieTitle(movieData)
         return cell
     }
     
