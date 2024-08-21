@@ -70,6 +70,15 @@ class MainScreenViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    func openDetails(movieID: Int) {
+        guard let movie = viewModel.retriveMovie(with: movieID) else { return }
+        let detailViewModel = DetailScreenViewModel(movie: movie)
+        let detailController = DetailScreenViewController(viewModel: detailViewModel)
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(detailController, animated: true)
+        }
+    }
 
 }
 
@@ -83,6 +92,11 @@ extension MainScreenViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieID = cellDataSource[indexPath.row].id
+        openDetails(movieID: movieID)
     }
     
 }

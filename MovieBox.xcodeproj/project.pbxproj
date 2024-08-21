@@ -25,6 +25,7 @@
 		1D4EB6922C72635700C8E140 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4EB6912C72635700C8E140 /* Observable.swift */; };
 		1D6187602C7670A800D7F238 /* DetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D61875E2C7670A800D7F238 /* DetailScreenViewController.swift */; };
 		1D6187612C7670A800D7F238 /* DetailScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D61875F2C7670A800D7F238 /* DetailScreenViewController.xib */; };
+		1D6187632C767C0400D7F238 /* DetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6187622C767C0400D7F238 /* DetailScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		1D4EB6912C72635700C8E140 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		1D61875E2C7670A800D7F238 /* DetailScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewController.swift; sourceTree = "<group>"; };
 		1D61875F2C7670A800D7F238 /* DetailScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenViewController.xib; sourceTree = "<group>"; };
+		1D6187622C767C0400D7F238 /* DetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				1D3E5C812C71212F0035205C /* MainViewModel.swift */,
 				1D3E36032C73E5FE0065707B /* MovieTableViewCellViewModel.swift */,
+				1D6187622C767C0400D7F238 /* DetailScreenViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				1D3E5C602C70FD6B0035205C /* AppDelegate.swift in Sources */,
 				1D3E5C772C7102280035205C /* MainScreenViewController.swift in Sources */,
 				1D4EB6922C72635700C8E140 /* Observable.swift in Sources */,
+				1D6187632C767C0400D7F238 /* DetailScreenViewModel.swift in Sources */,
 				1D3E36042C73E5FE0065707B /* MovieTableViewCellViewModel.swift in Sources */,
 				1D6187602C7670A800D7F238 /* DetailScreenViewController.swift in Sources */,
 				1D3E5C862C71449C0035205C /* APIClient.swift in Sources */,
