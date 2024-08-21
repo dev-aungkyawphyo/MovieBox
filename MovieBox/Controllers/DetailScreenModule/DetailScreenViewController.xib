@@ -25,7 +25,7 @@
                     <rect key="frame" x="16" y="59" width="361" height="300"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pYe-bD-01N">
-                    <rect key="frame" x="16" y="379" width="361" height="111.66666666666669"/>
+                    <rect key="frame" x="16" y="379" width="361" height="151.66666666666663"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvV-S4-0ff">
                             <rect key="frame" x="0.0" y="0.0" width="361" height="21.666666666666668"/>
@@ -34,9 +34,9 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLO-gT-ev8">
-                            <rect key="frame" x="0.0" y="31.666666666666686" width="361" height="80"/>
+                            <rect key="frame" x="0.0" y="31.666666666666686" width="361" height="120"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="80" id="egU-9c-QR8"/>
+                                <constraint firstAttribute="height" constant="120" id="egU-9c-QR8"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <nil key="textColor"/>
